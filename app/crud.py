@@ -16,7 +16,7 @@ def create_movie(db: Session, movie: schemas.MovieCreate):
     return db_movie
 
 def create_word(db: Session, word: schemas.WordCreate, movie_id: int):
-    db_word = models.Word(**word.dict())
+    db_word = models.Word(**word.dict(), movie_id=movie_id)
     db.add(db_word)
     db.commit()
     db.refresh(db_word)

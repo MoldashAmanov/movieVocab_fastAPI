@@ -5,7 +5,7 @@ from typing import List, Optional
 class WordBase(BaseModel):
     english: str
     russian: str
-    context = Optional[str] = None
+    context: Optional[str] = None
 
 
 class WordCreate(WordBase):
@@ -23,7 +23,7 @@ class Word(WordBase):
 class MovieBase(BaseModel):
     title: str
     year: Optional[int] = None
-    description = Optional[str] = None
+    description: Optional[str] = None
 
 
 class MovieCreate(MovieBase):
